@@ -108,11 +108,11 @@ function generateQuestionElement() {
   if (currentQuestion < qData.length) {
     return `<form role="form">
         <fieldset>
-          <div class="question" id="questionDiv">
+          <legend class="question" id="questionDiv">
             <h2 id="questiontxt">${qData[currentQuestion].question}</h2>
-          </div>
+          </legend>
           <label class="answers">
-            <input type="radio" name="answer" value="${qData[currentQuestion].answers[0]}">
+            <input type="radio" name="answer" value="${qData[currentQuestion].answers[0]}" autofocus>
             ${qData[currentQuestion].answers[0]}
           </label>
           <label class="answers">
@@ -167,6 +167,9 @@ function submitAnswer() {
         $('.mainBox').html(displayRightFeedback());
         playerScore++;
         updateScore();
+      } else if (selected === undefined) {
+        alert('You must select an answer.');
+        $('.submitButton').blur();
       } else {
         $('.mainBox').html(displayWrongFeedback(correctAns));
       }

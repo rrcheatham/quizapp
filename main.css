@@ -107,3 +107,29 @@ fieldset {
 .results {
   font-size: 24px;
 }
+
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 20px;
+  }
+  fieldset {
+    font-size: 18px;
+  }
+  legend h2 {
+    font-size: 18px;
+  }
+  div.mainBox {
+    margin-top: 20px;
+  }
+  .iconimg {
+    height: 50px;
+  }
+  header ul li {
+    padding: 5px;
+  }
+  header ul {
+    padding: 0px 0px 5px 5px;
+  }
+  .results {
+    font-size: 18px;
+  }
