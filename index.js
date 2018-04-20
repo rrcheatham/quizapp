@@ -112,7 +112,7 @@ function generateQuestionElement() {
             <h2 id="questiontxt">${qData[currentQuestion].question}</h2>
           </legend>
           <label class="answers">
-            <input type="radio" name="answer" value="${qData[currentQuestion].answers[0]}" autofocus>
+            <input type="radio" name="answer" value="${qData[currentQuestion].answers[0]}">
             ${qData[currentQuestion].answers[0]}
           </label>
           <label class="answers">
